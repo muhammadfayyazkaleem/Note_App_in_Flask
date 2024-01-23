@@ -3,5 +3,17 @@
     Home
 {% endblock title %}
 {% block content %}
-   <h1>This is the home Page.</h1>         
+    <h1> Notes </h1>
+    <ul class="list-group list-group-flush" id="notes">
+        {% for note in user.notes  %}
+        <li class="list-group-item"> {{note.data}}</li>       
+        {% endfor %}
+    </ul>
+   <form method="post">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br>
+    <div align = "center">
+        <button type="submit" class="btn btn-primary"> Add Note</button>
+    </div>
+   </form>        
 {% endblock content %}
