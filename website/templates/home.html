@@ -6,11 +6,12 @@
     <h1> Notes </h1>
     <ul class="list-group list-group-flush" id="notes">
         {% for note in user.notes  %}
-        <li class="list-group-item"> {{note.data}}
+        <li class="list-group-item"> &Otimes; {{note.data}}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick="deleteNote({{note.id}})">
     
             </button>
-        </li>       
+        </li>
+              
         {% endfor %}
     </ul>
    <form method="post">
